@@ -4,8 +4,8 @@ const cors = require("cors");
 const app = express();
 const port = 3001;
 
-const clientID = "0a67f4ab-eae1-4458-b195-fdc5dd5128ba";
-const clientSecret = "mwqrhjkqBNAeVvEk";
+const clientID = "2a15ff6a-d553-496b-ad48-a407085fc8cd";
+const clientSecret = "WojGGIwPQfwkFayq";
 const testServerBaseURL = "http://20.244.56.144/test";
 
 app.use(cors());
@@ -16,12 +16,12 @@ let accessToken = "";
 const authenticate = async () => {
   try {
     const response = await axios.post(`${testServerBaseURL}/auth`, {
-      companyName: "Bhawansh",
+      companyName: "Vaibhav",
       clientID: clientID,
       clientSecret: clientSecret,
-      ownerName: "Bhawansh",
-      ownerEmail: "bhawanshbaleja@gmail.com",
-      rollNo: "11620803121",
+      ownerName: "Vaibhav",
+      ownerEmail: "vaiibhav75@gmail.com",
+      rollNo: "05920802721",
     });
     accessToken = response.data.access_token;
     console.log("Authenticated successfully, access token acquired.");
